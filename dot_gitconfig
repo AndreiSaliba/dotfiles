@@ -1,0 +1,44 @@
+[user]
+	name = Andrei Saliba
+	email = andreisaliba@gmail.com
+[alias]
+	a = add
+	aa = add .
+	c = commit
+	ca = commit --amend
+	cane = commit --amend --no-edit
+	cnv = commit --no-verify
+	p = push
+	pfl = push --force-with-lease
+	pnv = push --no-verify
+	pnvfl = push --no-verify --force-with-lease
+	r = rebase
+	s = status
+[branch]
+    sort = -committerdate
+[diff]
+    algorithm = histogram
+    colorMoveed = plain
+    memonicPrefix = true
+    updateRefs = true
+[help]
+    autocorrect = prompt
+[init]
+	defaultBranch = main
+[rebase]
+    autoStash = true
+    committerDataIsAuthorDate = true
+    updateRefs = true
+[remote]
+    pushDefault = origin
+[rerere]
+    enabled = true
+[push]
+    autoSetupRemote = true
+    default = simple
+[pull]
+    ff = only
+[tag]
+    sort = version=refname
+[include]
+    path = ~/.gitconfig.local
