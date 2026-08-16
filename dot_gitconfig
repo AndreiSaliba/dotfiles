@@ -16,6 +16,10 @@
 	s = status
 [branch]
     sort = -committerdate
+[core]
+    pager = delta
+[delta]
+    navigate = true
 [diff]
     algorithm = histogram
     colorMoveed = plain
@@ -25,6 +29,10 @@
     autocorrect = prompt
 [init]
 	defaultBranch = main
+[interactive]
+    diffFilter = delta --color-only
+[merge]
+    conflictStyle = zdiff3
 [rebase]
     autoStash = true
     committerDataIsAuthorDate = true
