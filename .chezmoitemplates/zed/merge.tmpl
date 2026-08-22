@@ -1,0 +1,10 @@
+{{- $tracked := include ".chezmoitemplates/zed/settings.json" | fromJsonc -}}
+{{- $path := joinPath .chezmoi.homeDir ".config/zed/settings.json" -}}
+{{- if eq .chezmoi.os "windows" -}}
+  {{- $path = joinPath .chezmoi.homeDir "AppData/Roaming/Zed/settings.json" -}}
+  {{- $local := output "powershell.exe" "-NoProfile" "-Command" (printf "Get-Content -Raw -LiteralPath '%s'" $path) | fromJsonc -}}
+  {{- dict "local" $local "tracked" $tracked | jq ".local * .tracked" | first | toPrettyJson -}}
+{{- else -}}
+  {{- $local := output "cat" $path | fromJsonc -}}
+  {{- dict "local" $local "tracked" $tracked | jq ".local * .tracked" | first | toPrettyJson -}}
+{{- end -}}
