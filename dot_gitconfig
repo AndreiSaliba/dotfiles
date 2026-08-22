@@ -1,25 +1,25 @@
 [user]
-	name = Andrei Saliba
-	email = andreisaliba@gmail.com
+    name = Andrei Saliba
+    email = andreisaliba@gmail.com
 [alias]
-	a = add
-	aa = add .
-	c = commit
-	ca = commit --amend
-	cane = commit --amend --no-edit
-	cnv = commit --no-verify
-	p = push
-	pfl = push --force-with-lease
-	pnv = push --no-verify
-	pnvfl = push --no-verify --force-with-lease
-	r = rebase
-	s = status
+    a = add
+    aa = add .
+    c = commit
+    ca = commit --amend
+    cane = commit --amend --no-edit
+    cnv = commit --no-verify
+    p = push
+    pfl = push --force-with-lease
+    pnv = push --no-verify
+    pnvfl = push --no-verify --force-with-lease
+    r = rebase
+    s = status
 [branch]
     sort = -committerdate
 [core]
-    pager = delta
-[delta]
-    navigate = true
+    eol = lf
+    autocrlf = false
+    excludesFile = ~/.gitignore_global
 [diff]
     algorithm = histogram
     colorMoveed = plain
@@ -28,9 +28,7 @@
 [help]
     autocorrect = prompt
 [init]
-	defaultBranch = main
-[interactive]
-    diffFilter = delta --color-only
+    defaultBranch = main
 [merge]
     conflictStyle = zdiff3
 [rebase]
@@ -48,5 +46,15 @@
     ff = only
 [tag]
     sort = version=refname
+
+# Delta
+[delta]
+    navigate = true
+    side-by-side = true
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+
 [include]
     path = ~/.gitconfig.local
