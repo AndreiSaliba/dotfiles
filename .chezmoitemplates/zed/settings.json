@@ -17,6 +17,7 @@
   },
   "base_keymap": "VSCode",
   "buffer_font_size": 13,
+  "code_lens": "on",
   "collaboration_panel": {
     "button": false,
   },
@@ -24,18 +25,30 @@
   "edit_predictions": {
     "mode": "subtle",
   },
+  "diff_view_style": "split",
   "format_on_save": "on",
+  "git": {
+    "inline_blame": {
+      "enabled": true,
+    },
+  },
   "git_panel": {
     "dock": "left",
     "group_by": "staging",
     "tree_view": true,
   },
   "linked_edits": true,
+  "on_new_window": "launchpad",
   "outline_panel": {
     "dock": "left",
   },
   "project_panel": {
     "dock": "left",
+  },
+  "status_bar": {
+    "active_encoding_button": "enabled",
+    "line_endings_button": true,
+    "show_active_file": true,
   },
   "tab_size": 2,
   "tabs": {

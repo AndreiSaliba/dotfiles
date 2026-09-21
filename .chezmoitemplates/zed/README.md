@@ -8,7 +8,7 @@ chezmoi execute-template \
   --output "$HOME/.config/zed/settings.json"
 ```
 
-Windows:
+Windows (Powershell):
 
 ```sh
 chezmoi execute-template --file "$(chezmoi source-path)\.chezmoitemplates\zed\merge.tmpl" --output "$env:APPDATA\Zed\settings.json"
